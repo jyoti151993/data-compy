@@ -47,7 +47,7 @@ with pd.ExcelWriter('comparison_report_v2.xlsx',engine='openpyxl') as writer:
     df_emp2.to_excel(writer, sheet_name='Target Table (emp2)', index=False)
     
     # Write the comparison report to a separate sheet
-    df_report = pd.DataFrame(report.split('\n\n'), columns=['Comparison Report'])
+    df_report = pd.DataFrame(report.split('\n'), columns=['Comparison Report'])
     df_report.to_excel(writer, sheet_name='Comparison Report', index=False)
     
     
